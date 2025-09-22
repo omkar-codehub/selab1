@@ -1,1 +1,31 @@
+version: '3.9'
 
+services:
+	eduassesspro:
+		image: tomcat:9.0
+		ports:
+			- "8096:8080"
+		depends_on: db
+		
+	db:
+	    image: mysql:8.0
+	    container_name: mysqldb
+	    environment:
+	      MYSQL_ROOT_PASSWORD: root
+		  MYSQL_USER: eduser
+		  MYSQL_PASSWORd: edupass
+		ports:
+			- "3345:3307"
+		volumes:
+			- db_dir:/var/lib/mysql
+	
+	phpmyadmin:
+		image: adminer
+		restart: always
+		ports:
+		    - 9090:80
+		
+		
+
+
+	
