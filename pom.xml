@@ -4,10 +4,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>in.kmit</group1d>
+  <groupId>in.kmit</groupId>
   <artifactId>EduAssessPro</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
 
   <name>EduAssessPro Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
@@ -24,13 +24,46 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <scope>test</scope>
+      <version>4.13.2</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina -->
+<dependency>
+    <groupId>org.apache.tomcat</groupId>
+    <artifactId>tomcat-catalina</artifactId>
+    <version>9.0.89</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>4.0.1</version>
+    <scope>provided</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.33</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>2.0.17</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-site-plugin --><!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-site-plugin -->
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-site-plugin</artifactId>
+    <version>3.12.1</version>
+</dependency>
   </dependencies>
 
   <build>
     <finalName>EduAssessPro</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
+      	
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.4.0</version>
@@ -60,7 +93,7 @@
           <artifactId>maven-deploy-plugin</artifactId>
           <version>3.1.2</version>
         </plugin>
-      </plugin>
+      </plugins>
     </pluginManagement>
   </build>
 </project>
